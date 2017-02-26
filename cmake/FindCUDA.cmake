@@ -447,7 +447,7 @@ set(CUDA_GENERATED_OUTPUT_DIR "" CACHE PATH "Directory to put all the output fil
 option(CUDA_HOST_COMPILATION_CPP "Generated file extension" ON)
 
 # Extra user settable flags
-set(CUDA_NVCC_FLAGS "" CACHE STRING "Semi-colon delimit multiple arguments.")
+set(CUDA_NVCC_FLAGS "-D_FORCE_INLINES" CACHE STRING "Semi-colon delimit multiple arguments.")
 
 if(CMAKE_GENERATOR MATCHES "Visual Studio")
   set(CUDA_HOST_COMPILER "$(VCInstallDir)bin" CACHE FILEPATH "Host side compiler used by NVCC")
